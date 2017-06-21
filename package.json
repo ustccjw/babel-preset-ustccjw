@@ -1,0 +1,47 @@
+{
+  "name": "babel-preset-ustccjw",
+  "version": "1.0.0",
+  "description": "ustccjw's babel preset",
+  "keywords": [
+    "babel preset",
+    "ustccjw"
+  ],
+  "homepage": "https://github.com/ustccjw/babel-preset-ustccjw#readme",
+  "bugs": {
+    "url": "https://github.com/ustccjw/babel-preset-ustccjw/issues"
+  },
+  "license": "MIT",
+  "author": "ustccjw",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ustccjw/babel-preset-ustccjw.git"
+  },
+  "scripts": {
+    "build": "tnpm run clean && babel index.js -d lib",
+    "clean": "rimraf lib",
+    "lint": "eslint .",
+    "prepublish": "tnpm run build"
+  },
+  "dependencies": {
+    "babel-plugin-add-module-exports": "0.2",
+    "babel-plugin-transform-decorators-legacy": "1",
+    "babel-plugin-transform-runtime": "6",
+    "babel-preset-env": "1",
+    "babel-preset-react": "6",
+    "babel-preset-stage-0": "6"
+  },
+  "devDependencies": {
+    "@alipay/eslint-config-mkb": "1",
+    "babel-cli": "6",
+    "eslint": "3",
+    "pre-commit": "1",
+    "rimraf": "2"
+  },
+  "engines": {
+    "node": "7"
+  },
+  "pre-commit": [
+    "lint"
+  ]
+}
