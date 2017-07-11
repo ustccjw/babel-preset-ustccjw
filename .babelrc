@@ -2,9 +2,6 @@
   "presets": ["env", "stage-0", "react"],
   "plugins": [
     "babel-plugin-transform-decorators-legacy",
-    "babel-plugin-add-module-exports",
-    ["transform-runtime", {
-      "polyfill": false
-    }]
+    "babel-plugin-add-module-exports"
   ]
 }
