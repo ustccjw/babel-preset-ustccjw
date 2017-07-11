@@ -1,6 +1,6 @@
 {
   "name": "babel-preset-ustccjw",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "ustccjw's babel preset",
   "keywords": [
     "babel preset",
@@ -31,7 +31,7 @@
     "babel-preset-stage-0": "6"
   },
   "devDependencies": {
-    "@alipay/eslint-config-mkb": "1",
+    "eslint-config-ustccjw": "1",
     "babel-cli": "6",
     "eslint": "3",
     "pre-commit": "1",
