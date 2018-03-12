@@ -1,46 +1,50 @@
 {
   "name": "babel-preset-ustccjw",
-  "version": "1.0.3",
-  "description": "ustccjw's babel preset",
+  "version": "1.0.4",
+  "description": "ustccjw babel preset",
   "keywords": [
     "babel preset",
     "ustccjw"
   ],
-  "homepage": "https://github.com/ustccjw/babel-preset-ustccjw#readme",
-  "bugs": {
-    "url": "https://github.com/ustccjw/babel-preset-ustccjw/issues"
-  },
   "license": "MIT",
-  "author": "ustccjw",
-  "main": "lib/index.js",
+  "author": "jiawei.cjw",
+  "main": "src/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ustccjw/babel-preset-ustccjw.git"
+    "url": "https://github.com/ustccjw/babel-preset-ustccjw"
   },
   "scripts": {
-    "build": "tnpm run clean && babel index.js -d lib",
-    "clean": "rimraf lib",
-    "lint": "eslint .",
-    "prepublish": "tnpm run build"
+    "precommit": "lint-staged",
+    "commitmsg": "commitlint -e",
+    "lint": "eslint ."
   },
   "dependencies": {
-    "babel-plugin-add-module-exports": "0.2",
-    "babel-plugin-transform-decorators-legacy": "1",
-    "babel-preset-env": "1",
-    "babel-preset-react": "6",
-    "babel-preset-stage-0": "6"
+    "@babel/core": "^7.0.0-beta.40",
+    "@babel/plugin-transform-runtime": "^7.0.0-beta.40",
+    "@babel/preset-env": "^7.0.0-beta.40",
+    "@babel/preset-react": "^7.0.0-beta.40",
+    "@babel/preset-stage-0": "^7.0.0-beta.40"
   },
   "devDependencies": {
+    "@commitlint/cli": "6",
+    "@commitlint/config-angular": "6",
+    "eslint": "4",
     "eslint-config-ustccjw": "1",
-    "babel-cli": "6",
-    "eslint": "3",
-    "pre-commit": "1",
-    "rimraf": "2"
+    "husky": "0.14",
+    "lint-staged": "7"
+  },
+  "peerDependencies": {
+    "@babel/runtime": "^7.0.0-beta.40"
   },
   "engines": {
-    "node": "7"
+    "node": ">= 9.0.0"
   },
-  "pre-commit": [
-    "lint"
-  ]
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-angular"
+    ]
+  },
+  "lint-staged": {
+    "*.js": "eslint"
+  }
 }

@@ -1,3 +1,3 @@
 # babel-preset-ustccjw
 
-> ustccjw's babel preset
+> ustccjw babel preset
