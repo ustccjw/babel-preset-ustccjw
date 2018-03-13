@@ -1,6 +1,6 @@
 {
   "name": "babel-preset-ustccjw",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "ustccjw babel preset",
   "keywords": [
     "babel preset",
@@ -35,7 +35,7 @@
     "lint-staged": "7"
   },
   "engines": {
-    "node": ">= 9.0.0"
+    "node": ">= 8.10.0"
   },
   "commitlint": {
     "extends": [
